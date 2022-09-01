@@ -8,9 +8,7 @@ var maxSubArray = function(nums) {
 
   for (var i = 0; i < nums.length; i++) {
     prev = Math.max(prev + nums[i], nums[i])
-    console.log(prev)
     max = Math.max(max, prev)
-    console.log(max)
   }
   return max
 };
