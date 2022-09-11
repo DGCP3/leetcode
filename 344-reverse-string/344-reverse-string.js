@@ -6,5 +6,5 @@ var reverseString = function(s) {
  for(let i=0;i<s.length;i++){
     s.splice(i, 0, s.pop())  
  }
-    return s
+ return s
 };
