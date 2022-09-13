@@ -3,12 +3,12 @@
  * @return {string[][]}
  */
 var groupAnagrams = function(strs) {
-  const map = new Map();
+ const hash = {};
   for (const word of strs) {
     const key = word.split('').sort().join('');
-    const list = map.get(key) || [];
+    const list = hash[key] || [];
     list.push(word);
-    map.set(key, list);
+    hash[key] = list;
   }
-  return Array.from(map.values());
+  return Object.values(hash);
 };
